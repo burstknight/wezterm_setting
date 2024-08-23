@@ -14,6 +14,9 @@ local materia = wezterm.color.get_builtin_schemes()["Material Darker (base16)"]
 materia.scrollbar_thumb = "#cccccc"
 config.colors = materia
 
+-- Set the font size.
+config.font_size = 14
+
 -- Enable to show the scroll bar.
 config.enable_scroll_bar = true
 
