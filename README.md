@@ -22,7 +22,6 @@ sudo apt-get install wezterm
 ## Set the configuration for wezterm
 Please run the commands to set the configuration for `wezterm`.
 ```bash
-mkdir -p $HOME/.config/wezterm
-cp wezterm.lua $HOME/.config/wezterm
+cp -r wezterm.lua $HOME/.config
 ```
 
