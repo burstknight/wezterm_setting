@@ -25,13 +25,12 @@ config.disable_default_key_bindings = true
 
 local launch_menu = {}
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
-	ssh_cmd = {"powershell.exe"}
 	table.insert(
 		launch_menu,
 		{
 			label = "PowerShell",
 			args = {
-				"powershell.exe",
+				"pwsh.exe",
 				"-NoLogo"
 			}
 		}
@@ -49,8 +48,8 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 
 	config.launch_menu = launch_menu
 	config.default_prog = {
-		"powershell.exe",
-		"-NoLogo",
+		"pwsh.exe",
+		"-nologo",
 	}
 end
 
