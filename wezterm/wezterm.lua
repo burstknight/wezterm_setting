@@ -23,6 +23,37 @@ config.enable_scroll_bar = true
 -- Disable the default keymaps.
 config.disable_default_key_bindings = true
 
+local launch_menu = {}
+if wezterm.target_triple == "x86_64-pc-windows-msvc" then
+	ssh_cmd = {"powershell.exe"}
+	table.insert(
+		launch_menu,
+		{
+			label = "PowerShell",
+			args = {
+				"powershell.exe",
+				"-NoLogo"
+			}
+		}
+	)
+
+	table.insert(
+		launch_menu,
+		{
+			label = "CMD",
+			args = {
+				"cmd.exe",
+			}
+		}
+	)
+
+	config.launch_menu = launch_menu
+	config.default_prog = {
+		"powershell.exe",
+		"-NoLogo",
+	}
+end
+
 -- Set the keymaps.
 local act = wezterm.action
 config.keys = {
